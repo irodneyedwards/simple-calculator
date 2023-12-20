@@ -1,32 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Simple Calculator</title>
-</head>
-<body>
-    <h1>Simple Calculator</h1>
+<div>
+    <input type="text" id="result" readonly>
+    <button onclick="clearResult()">C</button>
+    <button onclick="display('1')">1</button>
+    <button onclick="display('2')">2</button>
+    <button onclick="display('3')">3</button>
+    <button onclick="display('4')">4</button>
+    <button onclick="display('5')">5</button>
 
-    <div>
-        <input type="text" id="result" readonly>
-        <button onclick="clear()">
-C</button>
-        <button onclick="display('1')">1
-</button>
-        <button onclick="display('2')">2
-</button>
-        <button onclick="display('3')">3
-</button>
-        <button onclick="display('4')">4
-</button>
-        <button onclick="display('5')">5</button>
+    <button onclick="display('+')">+</button>
+    <button onclick="display('-')">-</button>
 
-        <button onclick="display('+')">+</button>
-        <button onclick="display('-')">-</button>
-
-        <button onclick="evaluate()">=</button>
+    <button onclick="evaluate()">=</button>
 
     <script>
-        function clear() {
+        function clearResult() {
             document.getElementById('result').value = "";
         }
 
@@ -42,5 +29,4 @@ C</button>
             }
         }
     </script>
-</body>
-</html>
+</div>
