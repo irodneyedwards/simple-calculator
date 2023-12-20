@@ -28,6 +28,14 @@ C</button>
         function display(value) { 
             document.getElementById('result').value += value;
         }
+
+        function evaluate() {
+            try {
+                document.getElementById('result').value = eval(document.getElementById('result').value);
+            } catch (err) {
+                alert('Error');
+            }
+        }
     </script>
 </body>
 </html>
