@@ -1,32 +1,42 @@
-<div>
-    <input type="text" id="result" readonly>
-    <button onclick="clearResult()">C</button>
-    <button onclick="display('1')">1</button>
-    <button onclick="display('2')">2</button>
-    <button onclick="display('3')">3</button>
-    <button onclick="display('4')">4</button>
-    <button onclick="display('5')">5</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="result" readonly>
+        <button onclick="clearResult()">C</button>
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button onclick="display('4')">4</button>
+        <button onclick="display('5')">5</button>
 
-    <button onclick="display('+')">+</button>
-    <button onclick="display('-')">-</button>
+        <button onclick="display('+')">+</button>
+        <button onclick="display('-')">-</button>
 
-    <button onclick="evaluate()">=</button>
+        <button onclick="evaluate()">=</button>
 
-    <script>
-        function clearResult() {
-            document.getElementById('result').value = "";
-        }
-
-        function display(value) { 
-            document.getElementById('result').value += value;
-        }
-
-        function evaluate() {
-            try {
-                document.getElementById('result').value = eval(document.getElementById('result').value);
-            } catch (err) {
-                alert('Error');
+        <script>
+            function clearResult() {
+                document.getElementById('result').value = "";
             }
-        }
-    </script>
-</div>
+
+            function display(value) { 
+                document.getElementById('result').value += value;
+            }
+
+            function evaluate() {
+                try {
+                    document.getElementById('result').value = eval(document.getElementById('result').value);
+                } catch (err) {
+                    alert('Error');
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
